@@ -1,0 +1,243 @@
+$color_1: white;
+$color_2: #fff;
+$background-color_1: #bf382a;
+$background-color_2: #683531;
+
+.layout {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.header {
+	display: flex;
+	padding: 0 8px;
+	justify-content: space-between;
+	background-color: $background-color_1;
+	text-decoration: none !important;
+	align-items: center;
+	.header__logo {
+		width: 10%;
+		height: 10%;
+		display: flex;
+		align-items: center;
+		img {
+			width: 100%;
+			justify-content: center;
+			color: $color_1 !important;
+		}
+		.header__title {
+			color: $color_1;
+			text-decoration: none;
+			padding-right: 20px;
+		}
+	}
+	.header__menu {
+		.header__title {
+			color: $color_1;
+			text-decoration: none;
+		}
+	}
+	ul {
+		display: flex;
+		list-style-type: none;
+		align-items: center;
+		li {
+			color: $color_1 !important;
+			font-size: 20px;
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+	}
+}
+.header__menu {
+	.header__bar {
+		position: relative;
+		margin-left: 20px;
+		display: none;
+	}
+	>li {
+		&:hover {
+			.header__menu--sub {
+				display: inline-block;
+			}
+		}
+	}
+}
+.header__bar {
+	.header__menu--sub {
+		.header__title--sub {
+			color: $color_1;
+			text-decoration: none;
+			.header__border--1 {
+				border-bottom: 1px solid black;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				&:hover {
+					background-color: $background-color_2;
+					transition: all 0.3s;
+				}
+			}
+			.header__border--2 {
+				padding-top: 5px;
+				padding-bottom: 5px;
+				&:hover {
+					background-color: $background-color_2;
+					transition: all 0.3s;
+				}
+			}
+			.header__border--3 {
+				border-bottom: 1px solid black;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				&:hover {
+					background-color: $background-color_2;
+					transition: all 0.3s;
+				}
+			}
+		}
+		position: absolute;
+		top: 100%;
+		right: 0;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		min-width: 150px;
+		background-color: $background-color_1;
+		display: none;
+		text-align: center;
+		border: 1px solid black;
+		height: auto;
+		z-index: 9999;
+		.header__board {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+.layout__main {
+	margin: 0 auto;
+	width: 40%;
+	margin-top: 40px;
+}
+.layout__footer {
+	text-align: center;
+	background-color: $background-color_1;
+	color: $color_1;
+	padding: 20px 0;
+	position: -webkit-sticky;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin-top: 30px;
+}
+.active {
+	color: $color_1;
+	text-decoration: none;
+}
+ul {
+	li {
+		.header__title {
+			.header__button {
+				align-items: center;
+				background-color: $background-color_2;
+				border: 0;
+				border-radius: 10px;
+				box-sizing: border-box;
+				color: $color_2;
+				cursor: pointer;
+				display: flex;
+				flex-direction: column;
+				font-size: 16px;
+				font-weight: 500;
+				height: 54px;
+				justify-content: center;
+				letter-spacing: .4px;
+				line-height: 1;
+				max-width: 100%;
+				padding-left: 20px;
+				padding-right: 20px;
+				padding-top: 3px;
+				text-decoration: none;
+				text-transform: uppercase;
+				user-select: none;
+				-webkit-user-select: none;
+				touch-action: manipulation;
+				&:active {
+					outline: 0;
+				}
+				&:hover {
+					outline: 0;
+					span {
+						transform: scale(.9);
+						opacity: .75;
+					}
+				}
+				span {
+					transition: all 200ms;
+				}
+			}
+		}
+	}
+}
+@media all and (max-width:991.98px) {
+	ul {
+		li {
+			.header__title {
+				.header__button {
+					font-size: 15px;
+					height: 50px;
+					span {
+						line-height: 50px;
+					}
+				}
+			}
+		}
+	}
+	.header {
+		.header__logo {
+			width: 14%;
+		}
+	}
+}
+@media all and (max-width:767.98px) {
+	.header__menu {
+		.header__bar {
+			display: inline-block;
+		}
+		.header__login {
+			display: none;
+		}
+		.header__register {
+			display: none;
+		}
+		.header__home {
+			display: none;
+		}
+		.header__topic {
+			display: none;
+		}
+		.header__answer {
+			display: none;
+		}
+		.header__logout {
+			display: none;
+		}
+	}
+	.header {
+		.header__logo {
+			width: 20%;
+		}
+	}
+}
+@media all and (max-width:575.98px) {
+	.header {
+		.header__logo {
+			width: 34%;
+		}
+	}
+    .layout__main{
+        width:60%;
+        margin-left:16%!important;
+    }
+}

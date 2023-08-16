@@ -1,0 +1,56 @@
+$background-color_1: rgba(255, 255, 255, 0.477);
+
+.quiz__background {
+	background-color: $background-color_1;
+	padding: 20px;
+	border-radius: 20px;
+	width: 100%;
+}
+@media all and (max-width:767.98px) {
+	.form-quiz__item {
+		p {
+			font-size: 13px;
+		}
+		label {
+			font-size: 13px;
+		}
+	}
+	.quiz {
+		.skeleton__title {
+			span {
+				.react-loading-skeleton {
+					width: 200px !important;
+				}
+			}
+		}
+	}
+	.skeleton {
+		.skeleton__question {
+			span {
+				.react-loading-skeleton {
+					width: 150px !important;
+				}
+			}
+		}
+		.skeleton__answers {
+			span {
+				.react-loading-skeleton {
+					width: 100px !important;
+				}
+			}
+		}
+	}
+}
+@media all and (max-width:575.98px) {
+	.main__box {
+		width: 70%;
+	}
+	.form-quiz__item {
+		label {
+			font-size: 12px;
+		}
+	}
+	.quiz__background {
+		padding: 10px 5px;
+	}
+}

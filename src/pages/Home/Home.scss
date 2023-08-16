@@ -1,0 +1,33 @@
+
+.swiper{
+    width:100%;
+    height: 290px;
+    background-color: #bf382a;
+    border-radius: 20px;
+}
+
+.slide{
+    width:100%;
+    height:100%;
+}
+.home__slide{
+    width:100%;
+    height:100%;
+    img{
+        width:100%;
+        height:100%;
+    }
+}
+
+.slide__height{
+    padding:0 5px;
+    padding-top: 20px;
+    overflow:visible;
+}
+
+@media all and (max-width:575.98px){
+    .swiper{
+        width:110%;
+    }
+    
+  }
