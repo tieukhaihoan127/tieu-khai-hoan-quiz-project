@@ -34,7 +34,7 @@ function Answers() {
     let len = 0;
 
     if(window.innerWidth < 576){
-        len = 4;
+        len = 5;
     }
     else{
         len = 10;
