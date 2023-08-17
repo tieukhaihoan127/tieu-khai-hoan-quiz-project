@@ -49,11 +49,17 @@ function Result() {
         setTimeout(fetchApi,1000);
 
     },[]);
+    let len = 0;
+    if(window.innerWidth < 576){
+        len = 2;
+    }
+    else{
+        len = 20;
+    }
     let tmp = [];
-    for(let i=0;i<20;i++){
+    for (let i = 0; i < len; i++) {
         tmp.push(i);
     }
-    console.log(dataResult);
 
     return(
         <>

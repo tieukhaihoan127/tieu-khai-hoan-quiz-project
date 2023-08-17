@@ -31,8 +31,17 @@ function Answers() {
         fetchApi();
     }, []);
 
+    let len = 0;
+
+    if(window.innerWidth < 576){
+        len = 4;
+    }
+    else{
+        len = 10;
+    }
+
     let tmp = [];
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < len; i++) {
         tmp.push(i);
     }
 
@@ -47,6 +56,7 @@ function Answers() {
                             <tr>
                                 <th>Id</th>
                                 <th>Tên chủ đề</th>
+                                <th>Hành động</th>
                             </tr>
                         </thead>
                         <tbody>

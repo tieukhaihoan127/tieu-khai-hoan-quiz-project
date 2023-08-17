@@ -30,6 +30,7 @@ function Topic() {
                                 <tr>
                                     <th>Id</th>
                                     <th>Tên chủ đề</th>
+                                    <th>Hành động</th>
                                 </tr>
                             </thead>
                             <tbody>
